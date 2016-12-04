@@ -1,11 +1,16 @@
 #-----------------------------#
+#It's a demo for User Interface
 #Team Name: MacroHard
 #Members: Zhenlin Qi
 #         Zheyu Shi
 #         Yong Mao
+#All Rights Reserved
 #It's a demo for User Interface
 #-----------------------------#
 from tkinter import *
+from FileEditHelpButton import *
+from SegmentationButton import *
+from LexiconRuleButton import *
 
 def makeFileMenu():
     File = Menubutton(mBar, text='File', underline=0)
@@ -15,8 +20,8 @@ def makeFileMenu():
 
     File.menu.choices = Menu(File.menu)
 
-    File.menu.add_command(label='OpenFile')
-    File.menu.add_command(label='Exit',command=quit)
+    File.menu.add_command(label='OpenFile',command=Open_File())
+    File.menu.add_command(label='Exit',command=Quit())
 
     File['menu'] = File.menu
 
@@ -30,8 +35,8 @@ def makeEditMenu():
 
     Edit.menu.choices = Menu(Edit.menu)
 
-    Edit.menu.add_command(label='Edit a file')
-    Edit.menu.add_command(label='Imput a sentence')
+    Edit.menu.add_command(label='Edit a file',command=Edit_a_File())
+    Edit.menu.add_command(label='Input a sentence',command=Input_a_Sentence())
 
     Edit['menu'] = Edit.menu
 
@@ -45,8 +50,8 @@ def makeSegmentationMenu():
 
     Segmentation.menu.choices = Menu(Segmentation.menu)
 
-    Segmentation.menu.add_command(label='Segment sentences')
-    Segmentation.menu.add_command(label='Into a file')
+    Segmentation.menu.add_command(label='Segment sentences',command=Segment_Sentences())
+    Segmentation.menu.add_command(label='Into a file',command=Into_a_File())
 
     Segmentation['menu'] = Segmentation.menu
 
@@ -60,10 +65,10 @@ def makeLexiconMenu():
 
     Lexicon.menu.choices = Menu(Lexicon.menu)
 
-    Lexicon.menu.add_command(label='Load the Lexicon')
-    Lexicon.menu.add_command(label='Add a word into the Lexicon')
-    Lexicon.menu.add_command(label='Modify a word in the Lexicon')
-    Lexicon.menu.add_command(label='Delete a word in the Lexicon')
+    Lexicon.menu.add_command(label='Load the Lexicon',command=Load_Lexicon())
+    Lexicon.menu.add_command(label='Add a new word into the Lexicon',command=Add_Lexicon())
+    Lexicon.menu.add_command(label='Modify a word in the Lexicon',command=Modify_Lexicon())
+    Lexicon.menu.add_command(label='Delete a word in the Lexicon',command=Delete_Lexicon())
 
     Lexicon['menu'] = Lexicon.menu
 
@@ -77,10 +82,10 @@ def makeRuleMenu():
 
     Rule.menu.choices = Menu(Rule.menu)
 
-    Rule.menu.add_command(label='Load the Rule Library')
-    Rule.menu.add_command(label='Add a new Rule into the Library')
-    Rule.menu.add_command(label='Modify a Rule in the Library')
-    Rule.menu.add_command(label='Delete a Rule in the Library')
+    Rule.menu.add_command(label='Load the Rule Library',command=Load_Rule())
+    Rule.menu.add_command(label='Add a new Rule into the Library',command=Add_Rule())
+    Rule.menu.add_command(label='Modify a Rule in the Library',command=Modify_Rule())
+    Rule.menu.add_command(label='Delete a Rule in the Library',command=Delete_Rule())
 
     Rule['menu'] = Rule.menu
 
@@ -94,8 +99,8 @@ def makeHelpMenu():
 
     Help.menu.choices = Menu(Help.menu)
 
-    Help.menu.add_command(label='Instructions about the system')
-    Help.menu.add_command(label='Copyright information')
+    Help.menu.add_command(label='Instructions about the system',command=Instructions())
+    Help.menu.add_command(label='Copyright information',command=Copyright())
 
     Help['menu'] = Help.menu
 
@@ -103,7 +108,7 @@ def makeHelpMenu():
 
 #### Main starts here
 root = Tk()
-root.geometry('600x300')
+root.geometry('1366x768')
 
 mBar = Frame(root)
 mBar.pack(fill=X)
@@ -124,7 +129,10 @@ Rule=makeRuleMenu()
 mBar.tk_menuBar(Rule)
 
 Help=makeHelpMenu()
-#mBar.tk_menuBar(Help)
+mBar.tk_menuBar(Help)
+
+# im=PhotoImage(file='test.gif')
+# label(root,text='abc',image=im).pack(side='LEFT')
 
 root.title('Chinese Words Segmentation System')
 root.iconname('')
