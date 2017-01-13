@@ -1,0 +1,19 @@
+**********★★★★★★★★★★********************
+	Edition: 17.1.1.4
+	Made by Team MacroHard
+	Team member: Qi Zhenlin
+		     Shi Zheyu
+		     Mao Yong
+**********★★★★★★★★★★********************
+
+版本更新内容：
+	1)更新了程序说明文档
+	2)配置文件增加了图片路径
+	3)加入了默认分辨率提醒
+	4)精简代码
+
+What is updated in this edition:
+	1)Update the Program instrution file
+	2)Location of picture can be changed in configuration file
+	3)Inform user of the DPI warning
+	4)The code is more concise now

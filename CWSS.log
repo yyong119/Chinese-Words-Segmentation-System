@@ -1,0 +1,20 @@
+[2017-01-07 14:22:47]Loading configuration OK
+[2017-01-07 14:22:47]CWSS starts
+[2017-01-07 14:22:48]Loading UI OK
+[2017-01-07 14:22:48]Loading matrices
+[2017-01-07 14:22:48]Qi's algorithm begins to load
+        Time cost 2.203
+Error: Illegal characters occur in the text to be segmented!
+[2017-01-07 14:24:48]A file is opened
+        The location of the file C:/Users/yyyuy/Desktop/test-result.txt
+[2017-01-07 14:24:54]A file is opened
+        The location of the file C:/Users/yyyuy/Desktop/test.txt
+[2017-01-07 14:24:59]Shi's algorithm is activated
+[2017-01-07 14:25:00]Qi's algorithm is activated
+[2017-01-07 14:25:04]Shi's algorithm is activated
+[2017-01-07 14:25:05]Segment result is saved into a file
+[2017-01-07 14:25:12]Shi's algorithm is activated
+[2017-01-07 14:25:13]Segment result is saved into a file
+[2017-01-07 14:25:21]Shi's algorithm is activated
+[2017-01-07 14:25:22]Segment result is saved into a file
+[2017-01-07 14:25:31]CWSS exits
