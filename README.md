@@ -10,3 +10,7 @@ Python3.5
 大一上计算导论B项目，基于hmm的中文分词系统
 
 Team Macrohard
+
+## 运行方式
+
+双击__main__.pyw
